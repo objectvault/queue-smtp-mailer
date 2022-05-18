@@ -1,0 +1,19 @@
+# Docker Stuff
+Dockerfile
+
+# GIT Stuff
+.git
+.gitignore
+
+# VSCode Stuff
+.history
+.vs_code
+
+# Addon Configuration
+.editorconfig
+cspell.json
+
+# Other Application Stuff
+docs
+conf
+scripts
