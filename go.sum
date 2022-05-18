@@ -1,0 +1,6 @@
+github.com/domodwyer/mailyak/v3 v3.3.3 h1:E9cjqDUiwY1QSE5G2CbWHM7EJV5FybKPHnGovc2iaA8=
+github.com/domodwyer/mailyak/v3 v3.3.3/go.mod h1:lOm/u9CyCVWHeaAmHIdF4RiKVxKUT/H5XX10lIKAL6c=
+github.com/objectvault/queue-interface v0.0.1 h1:tVi2cl7f8TRtkYbIn8vnM7DYK4y/xN1WNL5XjoGO/84=
+github.com/objectvault/queue-interface v0.0.1/go.mod h1:Gkrm8iTO9cpjqnn4PLW0DK53WuH5E4DzcKh7aSP8ISQ=
+github.com/streadway/amqp v1.0.0 h1:kuuDrUJFZL1QYL9hUNuCxNObNzB0bV/ZG5jV3RWAQgo=
+github.com/streadway/amqp v1.0.0/go.mod h1:AZpEONHx3DKn8O/DFsRAY58/XVQiIPMTMB1SddzLXVw=
