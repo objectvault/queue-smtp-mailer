@@ -38,4 +38,4 @@ COPY --from=builder /usr/local/bin/app /app/mailer
 EXPOSE 3000
 
 # Execute Command
-CMD ["./mailer", "-c", "./conf.json"]
+CMD ["./mailer", "-c", "./mailer.json"]
