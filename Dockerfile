@@ -32,10 +32,7 @@ COPY --from=builder /usr/local/bin/app /app/mailer
 
 # Set Server Configuration File
 # copy example/docker.local.json server.json
-# use docker run ... -v /path/conf.json:/app/server.json:ro ...
-
-# ENVIRONMENT VARIABLES
-ENV MAILER_CONF = "./mailer.json"
+# use docker run ... -v /path/conf.json:/app/mailer.json:ro ...
 
 # Execute Command
-CMD ["./mailer", "-c", $MAILER_CONF]
+CMD ["./mailer", "-c", "./mailer.json"]
