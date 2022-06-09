@@ -28,3 +28,7 @@ logs
 .history
 *.code-workspace
 __debug_bin
+
+# Other paths
+##############
+templates

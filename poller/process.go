@@ -66,6 +66,8 @@ func toEmailMessage(source *map[string]interface{}) (*messages.EmailMessage, err
 	// Create
 	message := messages.EmailMessage{}
 
+	params := make(map[string]interface{})
+
 	// Range through the MAP and Set Message Properties
 	var err error
 	for k, v := range *source {
@@ -78,12 +80,12 @@ func toEmailMessage(source *map[string]interface{}) (*messages.EmailMessage, err
 			} else {
 				err = errors.New("Invalid Value for 'template' field")
 			}
-		case "language":
+		case "locale":
 			s, castOK := v.(string)
 			if castOK {
 				_, err = message.SetLanguage(s)
 			} else {
-				err = errors.New("Invalid Value for 'language' field")
+				err = errors.New("Invalid Value for 'locale' field")
 			}
 		case "to":
 			s, castOK := v.(string)
@@ -127,11 +129,21 @@ func toEmailMessage(source *map[string]interface{}) (*messages.EmailMessage, err
 			} else {
 				err = errors.New("Invalid Value for 'headers' field")
 			}
+		default: // Add Value to Parameters List
+			s, castOK := v.(string)
+			if castOK {
+				params[k] = s
+			}
 		}
 
 		if err != nil {
 			return nil, err
 		}
+	}
+
+	err = setEmailMaps(&message, params, "params")
+	if err != nil {
+		return nil, err
 	}
 
 	if !message.IsValid() {
